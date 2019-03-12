@@ -31,6 +31,8 @@ image_config: &image_config
 
   BROWSERS: true
 
+  ANSIBLE: true
+
 version: 2
 jobs:
   build:

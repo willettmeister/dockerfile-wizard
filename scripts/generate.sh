@@ -132,3 +132,9 @@ RUN apt-get -y install libgconf-2-4 \
   && mv chromedriver /usr/local/bin/chromedriver \
   && chmod +x /usr/local/bin/chromedriver"
 fi
+
+if [ $ANSIBLE = "true" ] ; then
+    echo "RUN apt-add-repository ppa:ansible/ansible \
+    && RUN apt update \
+    && RUN apt install ansible"
+fi
