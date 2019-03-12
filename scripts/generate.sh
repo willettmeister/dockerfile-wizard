@@ -134,7 +134,8 @@ RUN apt-get -y install libgconf-2-4 \
 fi
 
 if [ $ANSIBLE = "true" ] ; then
-    echo "RUN apt-add-repository ppa:ansible/ansible \
-    && RUN apt update \
-    && RUN apt install ansible"
+    echo "RUN apt-get install software-properties-common -y \
+    && RUN apt-add-repository ppa:ansible/ansible -y \
+    && RUN apt-get update -y \
+    && RUN apt-get install ansible -y "
 fi

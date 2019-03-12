@@ -19,7 +19,7 @@ image_config: &image_config
 
   # NODE_VERSION_NUM: # pick a version from https://nodejs.org/dist
 
-  PYTHON_VERSION_NUM: 3.7.2
+  # PYTHON_VERSION_NUM: 3.7.2
 
   JAVA: false
 
@@ -29,7 +29,7 @@ image_config: &image_config
 
   DOCKERIZE: false
 
-  BROWSERS: true
+  BROWSERS: false
 
   ANSIBLE: true
 
