@@ -33,6 +33,10 @@ image_config: &image_config
 
   ANSIBLE: true
 
+  BOTO: true
+
+  JEKYLL: true
+
 version: 2
 jobs:
   build:
