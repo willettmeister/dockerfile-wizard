@@ -140,11 +140,11 @@ if [ $ANSIBLE = "true" ] ; then
     && apt-get install ansible -y "
 fi
 
-if [ $BOTO= "true" ] ; then
+if [ $BOTO = "true" ] ; then
     echo "RUN apt-get install python3-boto3 python3-boto python3-botocore -y"
 fi
 
-if [ $JEKYLL= "true" ] ; then
+if [ $JEKYLL = "true" ] ; then
     echo "RUN apt-get install ruby-full build-essential zlib1g-dev -y \
     && echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc \
     && echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc \
