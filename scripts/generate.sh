@@ -141,7 +141,7 @@ if [ $ANSIBLE = "true" ] ; then
 fi
 
 if [ $BOTO= "true" ] ; then
-    echo "RUN apt-get install python3-boto3 python-boto python-botocore -y"
+    echo "RUN apt-get install python3-boto3 python3-boto python3-botocore -y"
 fi
 
 if [ $JEKYLL= "true" ] ; then
