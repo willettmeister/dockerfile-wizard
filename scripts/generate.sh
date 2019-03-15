@@ -134,11 +134,7 @@ RUN apt-get -y install libgconf-2-4 \
 fi
 
 if [ $ANSIBLE = "true" ] ; then
-#    echo "RUN pip3 install ansible"
-#RUN apt-get install software-properties-common -y \
-#    && apt-add-repository ppa:ansible/ansible -y \
-#    && apt-get update -y \
-#    && apt-get install ansible -y "
+    echo "RUN pip3 install ansible"
 fi
 
 if [ $BOTO = "true" ] ; then
