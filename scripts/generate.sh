@@ -139,7 +139,7 @@ if [ $ANSIBLE = "true" ] ; then
 #    && apt-add-repository ppa:ansible/ansible -y \
 #    && apt-get update -y \
 #    && apt-get install ansible -y "
-#fi
+fi
 
 if [ $BOTO = "true" ] ; then
     echo "RUN apt-get install python3-boto3 python3-boto python3-botocore -y"
