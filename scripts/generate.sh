@@ -133,12 +133,12 @@ RUN apt-get -y install libgconf-2-4 \
   && chmod +x /usr/local/bin/chromedriver"
 fi
 
-if [ $ANSIBLE = "true" ] ; then
-    echo "RUN pip3 install ansible"
+if [ $BOTO = "true" ] ; then
+    echo "RUN apt-get install python3-boto3 python3-boto python3-botocore python3-pip -y"
 fi
 
-if [ $BOTO = "true" ] ; then
-    echo "RUN apt-get install python3-boto3 python3-boto python3-botocore -y"
+if [ $ANSIBLE = "true" ] ; then
+    echo "RUN pip3 install ansible"
 fi
 
 if [ $JEKYLL = "true" ] ; then
