@@ -134,11 +134,12 @@ RUN apt-get -y install libgconf-2-4 \
 fi
 
 if [ $ANSIBLE = "true" ] ; then
-    echo "RUN apt-get install software-properties-common -y \
-    && apt-add-repository ppa:ansible/ansible -y \
-    && apt-get update -y \
-    && apt-get install ansible -y "
-fi
+#    echo "RUN pip3 install ansible"
+#RUN apt-get install software-properties-common -y \
+#    && apt-add-repository ppa:ansible/ansible -y \
+#    && apt-get update -y \
+#    && apt-get install ansible -y "
+#fi
 
 if [ $BOTO = "true" ] ; then
     echo "RUN apt-get install python3-boto3 python3-boto python3-botocore -y"
