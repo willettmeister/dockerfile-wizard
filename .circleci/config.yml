@@ -37,6 +37,8 @@ image_config: &image_config
 
   JEKYLL: true
 
+  SELENIUM: true
+
 version: 2
 jobs:
   build:
