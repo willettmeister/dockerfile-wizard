@@ -162,5 +162,6 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8"
 
 if [ $SELENIUM = "true" ] ; then
-    echo "RUN pip3 install selenium"
+    echo "RUN pip3 install selenium && \
+    npm install -g selenium-side-runner"
 fi
