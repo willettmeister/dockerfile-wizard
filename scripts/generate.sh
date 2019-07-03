@@ -5,11 +5,11 @@ echo "FROM buildpack-deps:$(awk -F'_' '{print tolower($2)}' <<< $LINUX_VERSION)"
 echo "RUN apt-get update"
 
 echo "ENV TZ=America/New_York"
-echo "XKBMODEL=\"pc105\" > /etc/default/keyboard"
-echo "XKBLAYOUT=\"us\" >> /etc/default/keyboard"
-echo "XKBVARIANT=\"\" >> /etc/default/keyboard"
-echo "XKBOPTIONS=\"\" >> /etc/default/keyboard"
-echo "BACKSPACE=\"guess\" >> /etc/default/keyboard"
+echo "RUN echo XKBMODEL=\"pc105\" > /etc/default/keyboard"
+echo "RUN echo XKBLAYOUT=\"us\" >> /etc/default/keyboard"
+echo "RUN echo XKBVARIANT=\"\" >> /etc/default/keyboard"
+echo "RUN echo XKBOPTIONS=\"\" >> /etc/default/keyboard"
+echo "RUN echo BACKSPACE=\"guess\" >> /etc/default/keyboard"
 echo "RUN ln -snf /usr/share/zoneinfo/\$TZ /etc/localtime && echo \$TZ > /etc/timezone"
 
 if [ ! -e $RUBY_VERSION_NUM ] ; then
