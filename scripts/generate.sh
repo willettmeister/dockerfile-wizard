@@ -5,7 +5,7 @@ echo "FROM buildpack-deps:$(awk -F'_' '{print tolower($2)}' <<< $LINUX_VERSION)"
 echo "RUN apt-get update"
 
 echo "ENV TZ=America/New_York"
-echo "RUN L='us' && sed -i 's/XKBLAYOUT=\"\\w*\"/XKBLAYOUT=\\"\'\$L\'\\\"/g\' /etc/default/keyboard"
+echo "RUN sed -i 's/XKBLAYOUT=\\\"\\w*\"/XKBLAYOUT=\\\"'us'\\\"/g\' /etc/default/keyboard"
 echo "RUN ln -snf /usr/share/zoneinfo/\$TZ /etc/localtime && echo \$TZ > /etc/timezone"
 
 if [ ! -e $RUBY_VERSION_NUM ] ; then
