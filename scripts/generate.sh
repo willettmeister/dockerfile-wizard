@@ -96,7 +96,7 @@ echo "RUN perl -MCPAN -e 'install TAP::Parser'"
 echo "RUN perl -MCPAN -e 'install XML::Generator'"
 
 # install lsb-release, etc., for testing linux distro
-echo "RUN apt-get update && apt-get -y install lsb-release unzip"
+echo "RUN apt-get update && apt-get -y install lsb-release unzip apt-utils"
 
 if [ $BROWSERS = "true" ] ; then
 cat << EOF
