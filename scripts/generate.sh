@@ -4,7 +4,7 @@ echo "FROM buildpack-deps:$(awk -F'_' '{print tolower($2)}' <<< $LINUX_VERSION)"
 
 echo "RUN apt-get update"
 
-echo "TZ=America/New_York"
+echo "ENV TZ=America/New_York"
 echo "RUN ls -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone"
 
 if [ ! -e $RUBY_VERSION_NUM ] ; then
