@@ -6,7 +6,7 @@ echo "RUN apt-get update"
 
 echo "ENV TZ=America/New_York"
 #echo "RUN touch /etc/default/keyboard"
-echo "RUN echo XKBLAYOUT=us \n XKBVARIANT= \n XKBOPTIONS=compose:menu,ctrl:noaps > /etc/default/keyboard"
+echo "RUN echo XKBLAYOUT=us '\n' XKBVARIANT= '\n' XKBOPTIONS=compose:menu,ctrl:noaps > /etc/default/keyboard"
 echo "RUN cat /etc/default/keyboard"
 #echo "RUN sed -i 's/XKBLAYOUT=\\\"\\w*\"/XKBLAYOUT=\\\"'us'\\\"/g' /etc/default/keyboard"
 echo "RUN ln -snf /usr/share/zoneinfo/\$TZ /etc/localtime && echo \$TZ > /etc/timezone"
