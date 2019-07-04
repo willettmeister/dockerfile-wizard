@@ -6,7 +6,7 @@ echo "RUN apt-get update"
 
 echo "ENV TZ=America/New_York"
 #echo "RUN touch /etc/default/keyboard"
-echo "RUN echo XKBLAYOUT=\\\"'us'\\\" > /etc/default/keyboard"
+echo "RUN echo XKBLAYOUT=us > /etc/default/keyboard"
 echo "RUN cat /etc/default/keyboard"
 #echo "RUN sed -i 's/XKBLAYOUT=\\\"\\w*\"/XKBLAYOUT=\\\"'us'\\\"/g' /etc/default/keyboard"
 echo "RUN ln -snf /usr/share/zoneinfo/\$TZ /etc/localtime && echo \$TZ > /etc/timezone"
@@ -110,7 +110,7 @@ cat << EOF
 RUN if [ \$(grep 'VERSION_ID="8"' /etc/os-release) ] ; then \\
     echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list && \\
     apt-get update && apt-get -y install -t jessie-backports xvfb phantomjs \\
-; else \\
+;  else \\
 		apt-get update && apt-get -y install xvfb phantomjs \\
 ; fi
 EOF
